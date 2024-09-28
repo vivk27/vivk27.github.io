@@ -20,13 +20,14 @@
                 if(!valid) {
                     alert('Заповніть всі поля !!!');
                     return false;
-                } else 
+                } 
+                /*else 
                 { var r = /^\w+@\w+\.\w{2,4}$/i;
                     if (!r.test(elems[2].value)) {
                         alert('Заповніть вірно E-Mail !!');
                         return false;
                     } else return true;
-                }
+                }*/
             }	
             
                 

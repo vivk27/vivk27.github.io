@@ -20,13 +20,14 @@
                 if(!valid) {
                     alert('Заповніть всі поля !!!');
                     return false;
-                } else 
+                } 
+                /*else 
                 { var r = /^\w+@\w+\.\w{2,4}$/i;
                     if (!r.test(elems[2].value)) {
                         alert('Заповніть вірно E-Mail !!');
                         return false;
                     } else return true;
-                }
+                }*/
             }	
             
                 
@@ -127,12 +128,7 @@
 <td width="70%">
 
 <?php
-$st = $_POST['name2'].";".$_POST['name1'].";".$_POST['email'].";".$_POST['password']."\n";
-$fp = fopen("baza.txt","a");
-fwrite($fp,$st);
 
-echo "<h1 align='center'>".$_POST['name2']." ".$_POST['name1']."<br>Дякуємо за реєстрацію !</h1>";
-echo "<h2 align='center' > на Ваш E-Mail : ".$_POST['email']."<br> відправлено повідомлення.</br>";
 ?>
     </td>
 </tr>
