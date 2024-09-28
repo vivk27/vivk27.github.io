@@ -2,6 +2,34 @@
     <HEAD>
         <meta charset ="utf-8">
         <title>Сайт web -студії "Web-DECO"</title>
+        <script src="js/clock.js"></script>
+        <script>
+            function send()
+            { 	var valid = true;
+                var elems = document.forms[0].elements;
+                for(var i=0; i<document.forms[0].length; i++){
+                    if( elems[i].getAttribute('type') == 'text' ||
+                        elems[i].getAttribute('type') == 'password' ||
+                        elems[i].getAttribute('type') == 'email' ) {
+                        if(elems[i].value == '') {
+                            elems[i].style.border = '2px solid red';
+                            valid = false;
+                        }
+                    }
+                }	
+                if(!valid) {
+                    alert('Заповніть всі поля !!!');
+                    return false;
+                } else 
+                { var r = /^\w+@\w+\.\w{2,4}$/i;
+                    if (!r.test(elems[2].value)) {
+                        alert('Заповніть вірно E-Mail !!');
+                        return false;
+                    } else return true;
+                }
+            }	
+            
+            </script>
         <style>
             .shadowtext {
             text-shadow: 1px 3px 2px white, 0 0 1em red;
@@ -9,6 +37,17 @@
             font-size: 3em;
             }
             </style>
+            <script> window.onload = function(send) {
+                setInterval(clockPainting, 1000);	
+                document.forms[0].onmousemove = function() {	var elems = document.forms[0].elements;
+                
+                    for(var i=0; i<elems.length; i++)
+                        if(elems[i].style.border == '2px solid red')
+                            elems[i].style.border='';
+                        } 
+                    
+                }	
+            </script>
     </HEAD>
 
         <BODY background="images/bg.jpg">
@@ -16,6 +55,7 @@
         <table border="1" align="center" cellpadding="10">
 <tr>
     <td background="images/bg-2.jpg" colspan="2" height="150" align="right">
+        <img src="images/logo.png" height="140" width="140" align="left" >
          <font size="5">
             <h1 class="shadowtext">Сайт web-студії "Web-DECO"</h1>
         </font></td>
@@ -33,7 +73,11 @@
     </td>
 </tr>
 <tr>
-<td width="30%" valign="top" ><font size="5" color="navy"><h2>Новини</h2></font>
+<td width="30%" valign="top" background="images/bg.jpg" >
+    <center><canvas id="canvas" height="120" width="120"></canvas> </center>
+    <br>
+    <hr>
+    <font size="5" color="navy"><h2>Новини</h2></font>
 <font size="5" >
 <ul>
 <li><a href="#">Сайт будівельної компанії </a></li>
