@@ -69,11 +69,11 @@
     <td colspan="2">
         <font size="4">
             <b>
-               <a href="#">Головна</a>&nbsp;&nbsp;
-               <a href="#">Фотогалерея</a>&nbsp;&nbsp;
-               <a href="#">Телефони</a>&nbsp; &nbsp;
-               <a href="#">Статистика</a>&nbsp; &nbsp;
-               <a href="#">Зареєстровані</a></b>
+                    <a href="index.php">Головна</a>&nbsp;&nbsp;
+                    <a href="#">Фотогалерея</a>&nbsp;&nbsp;
+                    <a href="#">Телефони</a>&nbsp; &nbsp;
+                    <a href="log.php">Статистика</a>&nbsp; &nbsp;
+                    <a href="input.php">Зареєстровані</a></b>
         </font>
     </td>
 </tr>
@@ -126,27 +126,25 @@
 <hr>
 </td>
 <td width="70%">
-<h1 align="center">Список зареєстрованих !</h1>
+<h1 align="center">Список відвідувань сайта !</h1>
 <TABLE  align="center" border="1" width="90%" style='font-size:100%'>
    <tr>
     <td align="center"><b>Npp</b></td>
-    <td align="center"><b>Прізвище</b></td>
-    <td align="center"><b>Імя</b></td>
-    <td align="center"><b>E-mail</b></td>
-    <td align="center"><b>Пароль</b></td>
+    <td align="center"><b>IP</b></td>
+    <td align="center"><b>Браузер</b></td>
+    <td align="center"><b>Дата</b></td>
    </tr>
    <?php 
-   $data = file("baza.txt");
+   $data = file("log.txt");
    $cn=1;
    foreach ($data as $line) {
-       $trs = explode(";", $line);
+       $trs = explode("|", $line);
    ?>
    <tr>
        <td align="center"><?php echo $cn;?></td>
        <td><?php echo $trs[0];?></td>
        <td><?php echo $trs[1];?></td>
        <td><?php echo $trs[2];?></td>
-       <td><?php echo $trs[3];?></td>
    </tr>
    <?php $cn++;  } ?>
 </TABLE> 

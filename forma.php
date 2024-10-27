@@ -73,11 +73,11 @@
             <td colspan="2">
                 <font size="4">
                     <b>
-                        <a href="#">Головна</a>&nbsp;&nbsp;
+                        <a href="index.php">Головна</a>&nbsp;&nbsp;
                         <a href="#">Фотогалерея</a>&nbsp;&nbsp;
                         <a href="#">Телефони</a>&nbsp; &nbsp;
-                        <a href="#">Статистика</a>&nbsp; &nbsp;
-                        <a href="#">Зареєстровані</a></b>
+                        <a href="log.php">Статистика</a>&nbsp; &nbsp;
+                        <a href="input.php">Зареєстровані</a></b>
                 </font>
             </td>
         </tr>
